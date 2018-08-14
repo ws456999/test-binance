@@ -1,0 +1,17 @@
+{
+  "extends": ["tslint-config-standard", "tslint-react", "tslint-config-prettier"],
+  "linterOptions": {
+    "exclude": [
+      "config/**/*.js",
+      "node_modules/**/*.ts",
+      "coverage/lcov-report/*.js"
+    ]
+  },
+  "rules": {
+    "no-return-await": false,
+    "strict-type-predicates": false,
+    "jsx-boolean-value": [false],
+    "no-empty": false,
+    "no-floating-promises": false
+  }
+}
