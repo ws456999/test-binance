@@ -4,8 +4,8 @@ import { bindActionCreators } from 'redux'
 import { withRouter } from 'react-router';
 import { History } from 'history'
 
-import { SFCCounterConnected } from '@/components/counter'
-import { SFCCounterDecorator } from '@/components/contain'
+// import { SFCCounterConnected } from '@/components/counter'
+// import { SFCCounterDecorator } from '@/components/contain'
 import * as countersActions from '@/store/modules/trade/actions'
 import { CoinListState } from '@/store/modules/trade/state'
 import Trade from '@/api/trade'
@@ -70,8 +70,7 @@ class Home extends React.Component<HomeProps, HomeState> {
     const { coinList } = this.props
     return (
       <div className={style.App}>
-        <SFCCounterConnected label="what3" />
-        <SFCCounterDecorator label="what3" />
+        {/* <SFCCounterConnected label="what3" /> */}
         <div className={style.col}>
           <div className={style['col-item']}>市场</div>
           <div className={style['col-item']}>最近价格</div>
