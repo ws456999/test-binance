@@ -8,6 +8,8 @@
     ]
   },
   "rules": {
+    "no-any": false,
+    "jsx-no-lambda": false,
     "no-return-await": false,
     "strict-type-predicates": false,
     "jsx-boolean-value": [false],

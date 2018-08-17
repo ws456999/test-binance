@@ -2,7 +2,7 @@ import { createStore, applyMiddleware, compose, combineReducers } from 'redux'
 import thunk from 'redux-thunk'
 import { routerReducer } from 'react-router-redux'
 import { createLogger } from 'redux-logger'
-import { reducer as homeReducer } from './modules/home/reducer'
+import tradeReducer from './modules/trade/reducer'
 
 // action 允许异步
 const middleware = [thunk]
@@ -19,12 +19,12 @@ const composeEnhancers =
 
 const enhancer = composeEnhancers(applyMiddleware(...middleware))
 
-const reducer = combineReducers({
-  home: homeReducer,
+export const rootReducer = combineReducers({
+  trade: tradeReducer,
   router: routerReducer
 })
 
-const store = createStore(reducer, enhancer)
-console.log(store.getState())
+const store = createStore(rootReducer, enhancer)
+// console.log(store.getState())
 
 export default store

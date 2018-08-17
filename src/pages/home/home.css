@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+}
+
+.col {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  &-item {
+    flex: 1;
+  }
+}

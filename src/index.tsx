@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 import Router from './router'
 import store from '@/store'
 import './styles/index.css'
-// import registerServiceWorker from './registerServiceWorker'
+import registerServiceWorker from './registerServiceWorker'
 
 ReactDOM.render(
   <Provider store={store}>
@@ -13,4 +13,4 @@ ReactDOM.render(
   document.getElementById('root') as HTMLElement
 )
 
-// registerServiceWorker()
+registerServiceWorker()

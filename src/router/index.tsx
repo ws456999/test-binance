@@ -14,7 +14,7 @@ const routes = () => (
   <Router>
     <div>
       <Route path='/' exact strict component={Home} />
-      <Route path='/trade' exact component={Trade} />
+      <Route path='/trade/:id' exact component={Trade} />
     </div>
   </Router>
 )

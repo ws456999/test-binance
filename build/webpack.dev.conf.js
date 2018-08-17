@@ -10,7 +10,7 @@ const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const portfinder = require('portfinder')
 const HOST = process.env.HOST
-const PORT = (process.env.PORT && Number(process.env.PORT)) || '8080'
+const PORT = (process.env.PORT && Number(process.env.PORT)) || '6060'
 
 const devWebpackConfig = merge(baseWebpackConfig, {
   mode: 'development',
@@ -19,6 +19,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
   // },
   devtool: 'eval-source-map',
   devServer: {
+    disableHostCheck: true,
     clientLogLevel: 'warning',
     historyApiFallback: true, //在开发单页应用时非常有用，它依赖于HTML5 history API，如果设置为true，所有的跳转将指向index.html
     contentBase: path.resolve(__dirname, '../src'),
@@ -35,7 +36,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         "target": "https://api.binance.com",
         "changeOrigin": true,
         "pathRewrite": {
-          "^/api": ""
+          // "^/api": ""
         }
       }
     },
